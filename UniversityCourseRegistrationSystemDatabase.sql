@@ -3,7 +3,7 @@ create table department(
 	name varchar,
 	building varchar,
 	head_of_dept varchar,
-	established_year varchar
+	established_year int
 )
 
 copy department from 'D:/DA18/GithubData/da18SqlTask2/department.csv' DELIMITER ',' csv header
@@ -14,10 +14,12 @@ select * from department
 create table faculty(
 	id varchar primary key,
 	name varchar,
-	department_id varchar,
 	title varchar,
-	email varchar
+	email varchar,
+	mob_no BIGINT
 )
+
+drop table faculty
 
 copy faculty from 'D:/DA18/GithubData/da18SqlTask2/faculty.csv' DELIMITER ',' csv header
 
